@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F45DE2E9-251C-41B9-9A1F-3989DD18FC04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>course_project</RootNamespace>
+    <AssemblyName>course_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoMaker.cs" />
+    <Compile Include="SwitcherBeatweener.cs" />
+    <Compile Include="_DataBase\Catalog\BasketFromCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Catalog\BasketFromCatalog.Designer.cs">
+      <DependentUpon>BasketFromCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Catalog\CataloG.cs" />
+    <Compile Include="_DataBase\Catalog\CatalogShower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Catalog\CatalogShower.Designer.cs">
+      <DependentUpon>CatalogShower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Catalog\SelecterPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Catalog\SelecterPersons.Designer.cs">
+      <DependentUpon>SelecterPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\DataBaseWorker.cs" />
+    <Compile Include="_DataBase\Goods\Category.cs" />
+    <Compile Include="_DataBase\Goods\CategoryesRedaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Goods\CategoryesRedaction.Designer.cs">
+      <DependentUpon>CategoryesRedaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Goods\Good.cs" />
+    <Compile Include="_DataBase\Goods\GoodsRedaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Goods\GoodsRedaction.Designer.cs">
+      <DependentUpon>GoodsRedaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\PeopleRuler\ChangeWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\PeopleRuler\ChangeWorkers.Designer.cs">
+      <DependentUpon>ChangeWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\PeopleRuler\PeopleRuler.cs" />
+    <Compile Include="_DataBase\PeopleRuler\WorkersRuler.cs" />
+    <Compile Include="_DataBase\Statement\IssueStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Statement\IssueStatement.Designer.cs">
+      <DependentUpon>IssueStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Statement\MakeMarkSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Statement\MakeMarkSeller.Designer.cs">
+      <DependentUpon>MakeMarkSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Statement\MyStatemtsShower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Statement\MyStatemtsShower.Designer.cs">
+      <DependentUpon>MyStatemtsShower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Statement\StatemenT.cs" />
+    <Compile Include="_DataBase\Statement\TimeMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Statement\TimeMaker.Designer.cs">
+      <DependentUpon>TimeMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Statement\ToReady.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Statement\ToReady.Designer.cs">
+      <DependentUpon>ToReady.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\GetGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\GetGoods.Designer.cs">
+      <DependentUpon>GetGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupOrder_accountet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupOrder_accountet.Designer.cs">
+      <DependentUpon>SupOrder_accountet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupOrder_sup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupOrder_sup.Designer.cs">
+      <DependentUpon>SupOrder_sup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\Supplier.cs" />
+    <Compile Include="_DataBase\Sup\SupplierFirmRuller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupplierFirmRuller.Designer.cs">
+      <DependentUpon>SupplierFirmRuller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupplierPresenters.cs" />
+    <Compile Include="_DataBase\Sup\SupplierRuller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\SupplierRuller.Designer.cs">
+      <DependentUpon>SupplierRuller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataBase\Sup\Все договора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_DataBase\Sup\Все договора.Designer.cs">
+      <DependentUpon>Все договора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Initialization\Autorization_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Initialization\Autorization_.Designer.cs">
+      <DependentUpon>Autorization_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Initialization\RegistrationNext.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Initialization\RegistrationNext.Designer.cs">
+      <DependentUpon>RegistrationNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Initialization\Registration_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Initialization\Registration_.Designer.cs">
+      <DependentUpon>Registration_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Initialization\SystemInicialization.cs" />
+    <Compile Include="_Roles\EnumRoleTypes.cs" />
+    <Compile Include="_Roles\FormRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Roles\FormRole.Designer.cs">
+      <DependentUpon>FormRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Roles\_Workers\AccountetShower.cs" />
+    <Compile Include="_Roles\_Other\CustomerShower.cs" />
+    <Compile Include="_Roles\Role.cs" />
+    <Compile Include="_Roles\_Workers\ManagerShower.cs" />
+    <Compile Include="_Roles\_Workers\MasterShower.cs" />
+    <Compile Include="_Roles\_Workers\StorekeeperShower.cs" />
+    <Compile Include="_Roles\_Other\SupplierShower.cs" />
+    <Compile Include="_Roles\_Workers\WorkerShower.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowSwither.cs" />
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Catalog\BasketFromCatalog.resx">
+      <DependentUpon>BasketFromCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Catalog\CatalogShower.resx">
+      <DependentUpon>CatalogShower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Catalog\SelecterPersons.resx">
+      <DependentUpon>SelecterPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Goods\CategoryesRedaction.resx">
+      <DependentUpon>CategoryesRedaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Goods\GoodsRedaction.resx">
+      <DependentUpon>GoodsRedaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\PeopleRuler\ChangeWorkers.resx">
+      <DependentUpon>ChangeWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Statement\IssueStatement.resx">
+      <DependentUpon>IssueStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Statement\MakeMarkSeller.resx">
+      <DependentUpon>MakeMarkSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Statement\MyStatemtsShower.resx">
+      <DependentUpon>MyStatemtsShower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Statement\TimeMaker.resx">
+      <DependentUpon>TimeMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Statement\ToReady.resx">
+      <DependentUpon>ToReady.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\GetGoods.resx">
+      <DependentUpon>GetGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\SupOrder_accountet.resx">
+      <DependentUpon>SupOrder_accountet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\SupOrder_sup.resx">
+      <DependentUpon>SupOrder_sup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\SupplierFirmRuller.resx">
+      <DependentUpon>SupplierFirmRuller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\SupplierRuller.resx">
+      <DependentUpon>SupplierRuller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_DataBase\Sup\Все договора.resx">
+      <DependentUpon>Все договора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Initialization\Autorization_.resx">
+      <DependentUpon>Autorization_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Initialization\RegistrationNext.resx">
+      <DependentUpon>RegistrationNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Initialization\Registration_.resx">
+      <DependentUpon>Registration_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="_Roles\FormRole.resx">
+      <DependentUpon>FormRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tmp.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line_ui_icons_Svg-10_icon-icons.com_72171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_130_icon-icons.com_61547.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line_ui_icons_Svg-10_icon-icons.com_72171 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay_cash_payment_money_dollar_bill_icon_143267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-приложение-для-ноутбука-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_89708.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_89708 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_89708 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11707614.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back_icon_151627.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back_icon_1516271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117076141.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_89708 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_89708 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32officeicons-31_897081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-приложение-для-ноутбука-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choice_adjudication_resolving_assortment_culling_icon_146782.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handle-door-lock-key-hole_108522.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_user_support_supportfortheuser_aquestion_theclient_2330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_icon-icons.com_54407.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentediting_editdocuments_text_documentedi_2820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workspace_table_study_work_furniture_icon_209731.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
